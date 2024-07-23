@@ -1,0 +1,503 @@
+/* nav styling begin */
+
+*{
+    padding: 0;
+    margin: 0;
+  }
+  
+  header{
+    background-color: #ffffff;
+  }
+  
+  li{
+    list-style: none;
+  }
+  
+  a{
+    color: grey;
+    text-decoration: none;
+    font-family: "Francois One", sans-serif;
+    font-weight: 400;
+  }
+  
+  .container{
+    max-width: 1224px;
+    width: 92%;
+    margin: 0 auto;
+  }
+  
+  .navbar{
+    min-height: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .nav-branding{
+    font-size: 2rem;
+  }
+  
+  .nav-menu{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 60px;
+  }
+  
+  .nav-link{
+    transition: 0.3s ease-out;
+  }
+  
+  .nav-link:hover{
+    color: dodgerblue;
+  }
+  
+  .hamburger{
+    display: none;
+    cursor: pointer;
+  }
+  
+  .bar{
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    background-color: black;
+  }
+  
+
+/* nav styling end */
+
+
+/* excess nav styling begin */
+
+.nlhphoto {
+  height: 4vw;
+  width: auto;
+}
+
+.active {
+  color: #006BB6; 
+}
+
+.active:hover {
+  cursor: default; 
+}
+
+.inactive:hover {
+  transition: 0.5s;
+  color: orange;
+}
+
+/* excess nav styling end */
+
+
+/* body styles begin */
+
+body {
+  background-image: url("Photos/eo.jpg");
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+/* body styles end */
+
+
+/* button styles begin*/
+
+.btn {
+  background-color: white;
+  color: #006BB6;
+  font-family: "Francois One", sans-serif;
+  border-radius: 20px;
+  height: 7vw;
+  width: 24vw;
+  font-size: 3vw;
+}
+
+.btn:hover {
+  background-color: orange;
+  color: white;
+  transition: 0.5s;
+}
+
+.button {
+  margin-left: 41%;
+  margin-top: 4%;
+  padding-bottom: 2%;
+}
+
+/* button styles end*/
+
+
+/* socials div styles begin */
+
+.yt-logo {
+  width: 7%;
+  height: auto;
+}
+
+.x-logo {
+  width: 7%;
+  height: auto;
+}
+
+.ig-logo {
+  width: 7%;
+  height: auto;
+}
+
+.tiktok-logo {
+  width: 7%;
+  height: auto;
+}
+
+.li-logo {
+  width: 7%;
+  height: auto;
+}
+
+#socials a {
+  margin: 0 7px;
+}
+
+#socials {
+  margin-left: 34%;
+  margin-top: 3%;
+  margin-bottom: 2%;
+}
+
+h3 {
+  text-align: center;
+  font-size: 3vw;
+  font-family: "Francois One", sans-serif;
+  color: white;
+  margin-left: 34px;
+}
+
+/* socials div styles end */
+
+
+
+/* main styles begin*/
+
+main {
+  margin-top: 60px;
+  margin-bottom: 5%;
+}
+
+/* main styles end */
+
+
+/* blue div styles begin */
+
+.blue{
+  height: 40%;
+  width: 100%;
+  background-color: #006BB6;
+  display: inline-block;
+}
+
+#welcome h1 {
+  font-size: 8vw;
+  text-align: center;
+  margin-top: 25px;
+  font-family: "Francois One", sans-serif;
+  color: white;
+}
+
+#welcome h2 {
+  font-size: 5vw;
+  margin-top: -2.3%;
+  margin-left: 49%;
+  font-family: "Francois One", sans-serif;
+  color: white;
+}
+
+/* blue div styles end */
+
+
+/* orange div styles begin */
+
+.orange {
+  display:  none;
+}
+
+/* orange div styles end */
+
+
+/* footer styles begin */
+
+footer {
+  width: 100%;
+  background: white;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  text-align: center;
+  padding: 7px;
+}
+
+footer p {
+  font-size: 10px;
+  display: inline-block;
+  padding: 0 50px;
+  margin: 10 20px;
+  color: black;
+  font-family: "Francois One", sans-serif;
+  font-style: bold;
+  
+}
+
+/* footer styles end */
+
+
+@keyframes slideIn {
+  0%{
+      transform: translateX(-500px);
+      opacity: 0;
+  }
+  100%{
+  
+  }
+  
+  }
+  
+/* animations styles end */
+
+
+/* nav media (hamburger) styles begin*/
+
+@media(max-width:1024px){
+  .hamburger{
+    display: block;
+  }
+
+  .hamburger.active .bar:nth-child(2){
+    opacity: 0;
+  }
+  .hamburger.active .bar:nth-child(1){
+    transform: translateY(8px) rotate(45deg);
+  }
+  .hamburger.active .bar:nth-child(3){
+    transform: translateY(-8px) rotate(-45deg);
+  }
+
+  .nav-menu{
+    position: fixed;
+    left: -100%;
+    top: 70px;
+    gap: 0;
+    flex-direction: column;
+    background-color: #ffffff;
+    width: 100%;
+    text-align: center;
+    transition: 0.3s;
+  }
+
+  .nav-item{
+    margin: 16px 0;
+  }
+
+  .nav-menu.active{
+    left: 0;
+  }
+
+}
+
+/* nav media (hamburger) styles end */
+
+@media(min-width:1024px){
+
+/* computer screen main div styles begin */
+
+main {
+  margin-top: 60px;
+  margin-bottom: 80px;
+}
+
+/* computer screen main div styles begin */
+
+
+/* computer screen blue div styles begin */ 
+
+  .blue{
+    height: 50%;
+    width: 70%;
+    background-color: #006BB6;
+    display: inline-block;
+  }
+
+  #welcome h1 {
+    font-size: 7vw;
+    text-align: center;
+    margin-top: 25px;
+  }
+
+  #welcome h2 {
+    font-size: 4vw;
+    margin-top: -10px;
+  }
+
+  #welcome {
+    margin-left: 60px;
+    animation: slideIn .7s ease-in; 
+  }
+
+  .btn {
+    font-size: 2.7vw;
+    height: 6vw;
+    width: 19vw;
+  }
+
+  .button {
+    padding-left: 4%;
+  }
+
+
+/* computer screen blue div styles end */ 
+
+
+
+/* computer screen orange div styles end */ 
+
+  .orange{
+    display: block;
+    height: 40%;
+    width: 30%;
+    background-color: #F58426;
+    float: right;
+  }
+
+  .orange img {
+    padding-top: 9%;
+    padding-left: 5%;
+    height: 27vw;
+    width: 28vw;
+  }
+
+  .orange #hdphimg {
+    height: 4.2vw;
+    width: 28vw;
+    padding-bottom: 8%;
+    padding-left: 5%;
+  }
+
+/* computer screen orange div styles end */ 
+
+
+/* computer screen .text h3 styles begin */
+
+.text {
+  font-family: "Francois One", sans-serif;
+  color: white;
+  font-size: 2.6vw;
+}
+
+
+h3 {
+  text-align: center;
+  font-size: 22px;
+  font-family: "Francois One", sans-serif;
+  color: white;
+  margin-left: -32px;
+  padding-top: 5px;
+}
+
+/* computer screen .text h3 styles end */
+
+
+/* computer screen button styles begin */
+
+.button {
+  margin-left: 30%;
+  margin-top: 5%;
+}
+
+/* computer screen button styles end */
+
+
+/* computer screen social stylings begin */
+
+#socials a {
+  margin: 0 7px;
+}
+
+#socials {
+  margin-left: 29%;
+}
+
+/* computer screen socials stylings end */
+
+
+/* computer screen footer styles begin */
+
+footer {
+  width: 100%;
+  background: white;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  text-align: center;
+  padding: 7px;
+}
+
+footer p {
+  font-size: 10px;
+  display: inline-block;
+  padding: 0 300px;
+  margin: 10 20px;
+  color: black;
+  font-family: "Francois One", sans-serif;
+  font-style: bold;
+  
+}
+
+/* computer screen footer styles end */
+
+}
+
+@media(min-width:1300px){
+
+  .nlhphoto {
+    height: 2vw;
+    width: auto;
+  }
+
+  .orange img {
+    padding-top: 6%;
+    padding-left: 9.6%;
+    height: 22vw;
+    width: 24vw;
+  }
+
+  .orange #hdphimg {
+    height: 3.1vw;
+    width: 28vw;
+    padding-bottom: 11%;
+    padding-left: 4%;
+  }
+
+  .btn {
+    height: 4vw;
+    width: 14vw;
+    font-size: 2vw;
+  }
+
+  .button {
+    margin-left: 37%;
+    margin-top: 5%;
+    margin-top: 2%;
+    padding-left: 0%;
+  }
+
+  h3 {
+    margin-right: 3%;
+    margin-bottom: -2%;
+    margin-top: -1%;
+  }
+
+}
